@@ -1,6 +1,8 @@
 import * as net from 'net';
 import * as yargs from 'yargs';
-
+/**
+ * type Request
+ */
 export type RequestType = {
   type: 'add' | 'mod' | 'remove' | 'read' | 'list';
   user?: string;
@@ -8,9 +10,14 @@ export type RequestType = {
   body?: string;
   color?: string;
 }
-
+/**
+ * Class Client
+ */
 export class Client{
   constructor(){}
+  /**
+   * Starts client request to the server
+   */
   start(){
     /**
      * Commands add

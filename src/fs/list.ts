@@ -1,9 +1,15 @@
 import * as fs from 'fs';
 import { RequestType } from '../client';
 import { ResponseType } from '../server';
-
+/**
+ * Class List
+ */
 export class List {
   constructor(private a: RequestType, private b: ResponseType){}
+  /**
+   * Method list
+   * @returns Response
+   */
   list(): ResponseType{
     if (fs.existsSync(`./dist/${this.a.user}`)){      
       fs.readdir(`./dist/${this.a.user}`, (err, files) => {

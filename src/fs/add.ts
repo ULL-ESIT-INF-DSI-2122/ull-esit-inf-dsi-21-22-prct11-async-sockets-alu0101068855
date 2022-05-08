@@ -2,10 +2,15 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { RequestType } from '../client';
 import { ResponseType } from '../server';
-
+/**
+ * Class Add
+ */
 export class Add {
   constructor(private a: RequestType, private b: ResponseType){}
-  
+  /**
+   * Method addNote
+   * @returns Response
+   */
   addNote(): ResponseType{ 
     if (!fs.existsSync(`./dist/${this.a.user}`)){
       fs.mkdir(path.join(__dirname, String(this.a.user)), (err) => {

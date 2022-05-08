@@ -6,15 +6,22 @@ import { Modify } from './fs/modify';
 import { Remove } from './fs/remove';
 import { Read } from './fs/read';
 import { List } from './fs/list';
-
+/**
+ * Type Response
+ */
 export type ResponseType = {
   type: 'add' | 'mod' | 'remove' | 'read' | 'list';
   success: boolean;
   notes?: string[];
 }
-
+/**
+ * Class Server
+ */
 export class Server {
   constructor(){}
+  /**
+   * Starts the server
+   */
   start(){       
   net.createServer((connection) => {
     console.log('A client has connected.');
