@@ -1,9 +1,12 @@
 {
   "entryPoints": [
-      "./src/ejercicio1/ejercicio1.ts",
-      "./src/ejercicio2/ejercicio2.ts",
-      "./src/ejercicio3/ejercicio3.ts",
-      "./src/ejercicio4/ejercicio4.ts"
+      "./src/fs/add.ts",
+      "./src/fs/list.ts",
+      "./src/fs/modify.ts",
+      "./src/fs/read.ts",
+      "./src/fs/remove.ts",
+      "./src/server.ts",
+      "./src/client.ts"
   ],
   "out": "./docs"
 }
